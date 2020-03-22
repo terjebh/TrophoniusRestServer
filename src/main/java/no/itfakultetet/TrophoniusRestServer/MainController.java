@@ -18,5 +18,4 @@ public class MainController {
         return String.format("<h1>User Data</h1>", name);
     }
 
-
 }
