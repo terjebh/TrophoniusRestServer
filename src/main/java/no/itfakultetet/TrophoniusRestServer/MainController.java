@@ -15,7 +15,8 @@ public class MainController {
 
     @GetMapping("/user")
     public String user(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return String.format("<h1>User Data</h1>", name);
+        return String.format("<h1>User Data for %s</h1>", name);
+
     }
 
 }
