@@ -31,7 +31,7 @@ pipeline {
      stage('Deploy Image') {
               steps{
                 script {
-                  docker.withRegistry( 'terjebh/trophonius:', registryCredential ) {
+                  docker.withRegistry( '', registryCredential ) {
                     dockerImage.push("$BUILD_NUMBER")
                      dockerImage.push('latest')
 
