@@ -1,10 +1,11 @@
 pipeline {
    environment {
-          imagename = "terjebh/trophonius"
+          imagename = 'terjebh/trophonius'
           registryCredential = 'dockerhub'
           dockerImage = ''
         }
- agent any
+
+   agent any
   
   stages {
    
@@ -45,8 +46,5 @@ pipeline {
             }
           }
         }
-
-    
-  }
   
 }
