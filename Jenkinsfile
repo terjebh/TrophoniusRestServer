@@ -14,9 +14,7 @@ pipeline {
     stage("Maven Package") {
      
       steps {
-        
         sh 'mvn clean package'
-        
       }
       
     }
@@ -27,7 +25,8 @@ pipeline {
                   dockerImage = docker.build imagename
                 }
               }
-            }
+           }
+
      stage('Deploy Image') {
               steps{
                 script {
@@ -48,5 +47,4 @@ pipeline {
             }
           }
 
-  
 }
