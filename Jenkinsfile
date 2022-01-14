@@ -55,7 +55,7 @@ pipeline {
                  nexusVersion: 'nexus3',
                  protocol: 'http',
                  repository: 'Trophonius',
-                 version: '0.0.10'
+                 version: '0.0.1'
 
                }
               }
