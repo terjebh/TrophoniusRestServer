@@ -45,6 +45,22 @@ pipeline {
 
               }
             }
+
+          stage('Upload to Nexus') {
+               steps {
+                 nexusArtifactUploader artifacts: [[artifactId: 'TrophoniusRestServer', classifier: '', file: 'target/TrophoniusRestServer-0.0.1-SNAPSHOT.jar', type: 'jar']],
+                 credentialsId: 'c9b3d9ca-d42d-4688-9f04-5d63007b1332',
+                 groupId: 'no.itfakultetet',
+                 nexusUrl: 'noderia.com:8081',
+                 nexusVersion: 'nexus3',
+                 protocol: 'http',
+                 repository: 'Trophonius',
+                 version: '0.0.10'
+
+               }
+              }
+
+
           }
 
 }
