@@ -60,7 +60,13 @@ pipeline {
                }
               }
 
+              stage('Message Mattermost') {
+                 steps {
 
+                mattermostSend channel: 'CustoSales', message: 'New version in Github - Jenkins says:  Job Name: ${env.JOB_NAME}   Build Number:  ${env.BUILD_NUMBER}', text: 'You\'re welcome !   From CustoSales Dev Team'
+
+               }
+              }
           }
 
 }
