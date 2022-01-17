@@ -63,7 +63,7 @@ pipeline {
               stage('Message Mattermost') {
                  steps {
 
-                mattermostSend channel: '#custosales', endpoint: 'http://mattermost.custosales.com:8065/hooks/mrdop611a3ns3qadqciy6qywjo',  message: 'New version in build and uploaded to hub.docker.com ', text: 'Build Successful!   From CustoSales Dev Team'
+                mattermostSend channel: 'trophonius', endpoint: 'http://mattermost.custosales.com:8065/hooks/mrdop611a3ns3qadqciy6qywjo',  message: 'New version is build and uploaded to hub.docker.com ', text: '### Build Successful!  From Trophonius Dev Team'
 
                }
               }
