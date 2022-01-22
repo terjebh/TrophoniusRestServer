@@ -63,8 +63,8 @@ pipeline {
               stage('Message Mattermost') {
                  steps {
 
-                mattermostSend channel: '#trophonius,town-square', endpoint: 'http://mattermost.custosales.com:8065/hooks/mrdop611a3ns3qadqciy6qywjo',  message: 'New version is build and uploaded to hub.docker.com ', text: '### Build Successful!  From Trophonius Dev Team'
-
+                mattermostSend channel: 'custosalessupport@custosales,back-end,town-square', endpoint: 'http://mattermost.itfakultetet.no:8065/hooks/zn9prjnrptn6zxp8jnr3gi61gc', message: "### Bare Hyggelig!  From CustoSales Dev Team \n- Jenkins sier:  \nJob:  ${env.JOB_NAME}   \nByggnummer:  ${env.BUILD_NUMBER}  :tada:", text: '### Ny versjon på Nexus og hub.docker.com  :white_check_mark:'
+                emailext body: "Dette er en mail fra Jenkins pipeline\nJenkins sier:  Jobb: ${env.JOB_NAME}\Byggnummer:  ${env.BUILD_NUMBER} gikk bra!", subject: 'Trophonius RestServer - Ny versjon!', to: 'terje@itfakultetet.no'
                }
               }
           }
