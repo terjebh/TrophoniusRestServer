@@ -6,7 +6,7 @@ pipeline {
         }
 
    agent {
-     label "master"
+     label "master","maven"
    }
   
   stages {
