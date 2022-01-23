@@ -21,7 +21,7 @@ pipeline {
      
      stage("Save Artifact") {
         steps {
-         archiveArtifacts artifacts: "TrophoniusRestServer-0.0.1-SNAPSHOT.jar", fingerprint: true  
+         archiveArtifacts artifacts: "target/TrophoniusRestServer-0.0.1-SNAPSHOT.jar", fingerprint: true  
         }   
         
      }   
