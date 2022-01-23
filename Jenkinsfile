@@ -18,6 +18,13 @@ pipeline {
       }
       
     }
+     
+     stage("Save Artifact") {
+        steps {
+         archiveArtifacts artifacts: "TrophoniusRestServer-0.0.1-SNAPSHOT.jar", fingerprint: true  
+        }   
+        
+     }   
 
      stage('Build docker image') {
               steps{
