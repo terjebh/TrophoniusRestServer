@@ -56,7 +56,7 @@ pipeline {
           stage('Upload jar to Nexus') {
                steps {
                  nexusArtifactUploader artifacts: [[artifactId: 'TrophoniusRestServer', classifier: '', file: 'target/TrophoniusRestServer-0.0.1-SNAPSHOT.jar', type: 'jar']],
-                 credentialsId: 'c9b3d9ca-d42d-4688-9f04-5d63007b1332',
+                 credentialsId: '72654080-f2e8-42cf-b93d-b38038fbb381',
                  groupId: 'no.itfakultetet',
                  nexusUrl: 'noderia.com:8081',
                  nexusVersion: 'nexus3',
